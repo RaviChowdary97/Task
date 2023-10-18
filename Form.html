@@ -5,266 +5,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      #form {
-        border: 1px solid lightcoral;
+      .first-div label:after {
+        content: "*";
+        color: red;
       }
-      .span {
-        font-size: 11px;
-        font-weight: bold;
+      .email-div label:after {
+        content: "*";
+        color: red;
       }
-      .span1 {
-        padding-left: 9px;
+      .exp-div label:after {
+        content: "*";
+        color: red;
       }
-      .span2 {
-        padding-left: 143px;
+      .rad-div label:after {
+        content: "*";
+        color: red;
       }
-      .form-control {
-        font-weight: bold;
-        padding-left: 9px;
+      .rad1-div label:after {
+        content: "*";
+        color: red;
       }
-      p {
-        padding-left: 9px;
+      .checked {
+        color: orange;
       }
-
-      .label {
-        font-weight: bold;
-        padding-left: 9px;
+      .container {
+        display: flex;
+        flex-direction: row;
       }
       table {
+        width: 100%;
+      }
+      tr,
+      td {
+        padding: 5px;
+        text-align: center;
+        white-space: nowrap;
+      }
+      tr:nth-child(even) {
+        background-color: rgba(229, 239, 239, 0.871);
+      }
+      input {
         border: 1px solid black;
       }
-      textarea,
+      label {
+        font-weight: bold;
+      }
+      textarea {
+        border: 1px solid black;
+      }
       button {
-        display: block;
+        border: 1px solid black;
+        padding: 10px;
+      }
+      .star-rating {
+        display: flex;
+        align-items: left;
+      }
+      .checked {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+      }
+      .checked::before {
+        content: "★";
+        font-size: 20px;
+        color: orange;
+      }
+      span {
+        font-size: 11px;
+      }
+      .span {
+        padding-left: 148px;
       }
     </style>
   </head>
   <body>
-    <form id="form">
-      <div class="form-control">
-        <label for="name" id="label-name"> Name </label>
+    <form>
+      <div class="conatainer">
+        <div class="first-div">
+          <label>Name</label>
+        </div>
+        <br />
+        <div class="input-div">
+          <input type="text" />
+          <input type="text" />
+        </div>
+        <span>First</span>
+        <span class="span">Last</span>
+        <br />
+        <br />
+        <div class="email-div">
+          <label>Email</label>
+        </div>
+        <br />
+        <div>
+          <input type="text" />
+        </div>
+        <br />
+        <div class="exp-div">
+          <label>your Experience</label>
+        </div>
+        <div class="star-rating">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
+        <br />
+        <p>Overall, how would you rate your experience with us?</p>
+        <div class="rad-div">
+          <label>How satisfied are you with</label>
+        </div>
+        <div class="table-div">
+          <table>
+            <tr>
+              <td></td>
+              <td>Very Unsatisfied</td>
+              <td>Unsatisfied</td>
+              <td>Neutral</td>
+              <td>Satisfied</td>
+              <td>Very Satisfied</td>
+            </tr>
+            <tr>
+              <td style="text-align: left">Purchase</td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+            </tr>
+            <tr>
+              <td style="text-align: left">Service</td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+            </tr>
+            <td style="text-align: left">Company Overall</td>
+            <td><input type="radio" /></td>
+            <td><input type="radio" /></td>
+            <td><input type="radio" /></td>
+            <td><input type="radio" /></td>
+            <td><input type="radio" /></td>
+          </table>
+        </div>
+        <br />
+        <div class="rad1-div">
+          <label>How likely are you to</label>
+        </div>
+        <div class="table-div">
+          <table>
+            <tr>
+              <td></td>
+              <td>Very Unlikely</td>
+              <td>Unlikely</td>
+              <td>Neutral</td>
+              <td>Likely</td>
+              <td>Very Likely</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; width: 10%">Buy from again</td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+            </tr>
+            <tr>
+              <td style="text-align: left; width: 10%">
+                Recommend our product to other
+              </td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+              <td><input type="radio" /></td>
+            </tr>
+            <td>Recommend our Company to other</td>
+            <td><input type="radio" /></td>
+            <td><input type="radio" /></td>
+            <td><input type="radio" /></td>
+            <td><input type="radio" /></td>
+            <td><input type="radio" /></td>
+          </table>
+        </div>
+        <br />
+        <div class="comment-div">
+          <label>Additional comments or Suggestions</label>
+        </div>
+        <br />
+        <div>
+          <textarea rows="8" cols="162"></textarea>
+        </div>
+        <br />
+        <button type="submit">Submit</button>
       </div>
-      <br />
-      <div class="form-control">
-        <input type="text" name="name" id="name" />
-        <input type="text" name="name" id="name" />
-      </div>
-      <span class="span1 span">First</span>
-      <span class="span2 span">Last</span>
-      <br />
-      <br />
-      <div class="form-control">
-        <label for="email" id="label-email"> Email </label>
-      </div>
-      <br />
-      <div class="form-control">
-        <input type="text" name="email" id="email" />
-      </div>
-
-      <br />
-      <label class="label"> Your Experience</label>
-      <br />
-      <br />
-      <div>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-      </div>
-
-      <p>Overall. how would you rate you experience with us?</p>
-
-      <label class="label"> How satisfied are you with </label>
-
-      <br />
-      <br />
-      <table>
-        <tr>
-          <th></th>
-          <td>Very Unatisfied</td>
-          <td>unsatisfied</td>
-          <td>Neutral</td>
-          <td>Satisfied</td>
-          <td>Very Satisfied</td>
-        </tr>
-        <tr>
-          <th>Purchase</th>
-          <td>
-            <input
-              type="radio"
-              value="Purchase"
-              name="Purchase"
-              id="Purchase"
-            />
-          </td>
-          <td>
-            <input
-              type="radio"
-              value="Purchase"
-              name="Purchase"
-              id="Purchase"
-            />
-          </td>
-          <td>
-            <input
-              type="radio"
-              value="Purchase"
-              name="Purchase"
-              id="Purchase"
-            />
-          </td>
-          <td>
-            <input
-              type="radio"
-              value="Purchase"
-              name="Purchase"
-              id="Purchase"
-            />
-          </td>
-          <td>
-            <input
-              type="radio"
-              value="Purchase"
-              name="Purchase"
-              id="Purchase"
-            />
-          </td>
-        </tr>
-        <tr>
-          <th>Service</th>
-          <td>
-            <input
-              type="radio"
-              value="Purchase"
-              name="Purchase"
-              id="Purchase"
-            />
-          </td>
-          <td>
-            <input
-              type="radio"
-              value="Purchase"
-              name="Purchase"
-              id="Purchase"
-            />
-          </td>
-          <td>
-            <input
-              type="radio"
-              value="Purchase"
-              name="Purchase"
-              id="Purchase"
-            />
-          </td>
-          <td>
-            <input
-              type="radio"
-              value="Purchase"
-              name="Purchase"
-              id="Purchase"
-            />
-          </td>
-          <td>
-            <input
-              type="radio"
-              value="Purchase"
-              name="Purchase"
-              id="Purchase"
-            />
-          </td>
-        </tr>
-        <tr>
-          <th>Company Overall</th>
-          <td>
-            <input
-              type="radio"
-              value="Purchase"
-              name="Purchase"
-              id="Purchase"
-            />
-          </td>
-          <td>
-            <input
-              type="radio"
-              value="Purchase"
-              name="Purchase"
-              id="Purchase"
-            />
-          </td>
-          <td>
-            <input
-              type="radio"
-              value="Purchase"
-              name="Purchase"
-              id="Purchase"
-            />
-          </td>
-          <td>
-            <input
-              type="radio"
-              value="Purchase"
-              name="Purchase"
-              id="Purchase"
-            />
-          </td>
-          <td>
-            <input
-              type="radio"
-              value="Purchase"
-              name="Purchase"
-              id="Purchase"
-            />
-          </td>
-        </tr>
-      </table>
-      <br />
-      <label class="label">How likely are you to</label>
-      <br />
-      <br />
-      <table>
-        <tr>
-          <th></th>
-          <td>Very Unlikely</td>
-          <td>Unlikely</td>
-          <td>Neutral</td>
-          <td>Likely</td>
-          <td>Very Likely</td>
-        </tr>
-        <tr>
-          <th>Buy from us again</th>
-          <td><input type="radio" /></td>
-          <td><input type="radio" /></td>
-          <td><input type="radio" /></td>
-          <td><input type="radio" /></td>
-          <td><input type="radio" /></td>
-        </tr>
-        <tr>
-          <th>Recommend our product to others</th>
-          <td><input type="radio" /></td>
-          <td><input type="radio" /></td>
-          <td><input type="radio" /></td>
-          <td><input type="radio" /></td>
-          <td><input type="radio" /></td>
-        </tr>
-        <tr>
-          <th>Recommend our Company to others</th>
-          <td><input type="radio" /></td>
-          <td><input type="radio" /></td>
-          <td><input type="radio" /></td>
-          <td><input type="radio" /></td>
-          <td><input type="radio" /></td>
-        </tr>
-      </table>
-
-      <br />
-      <label class="label">Additional comments or suggestions</label>
-      <br />
-      <br />
-      <textarea name="comment" id="comment"> </textarea>
-
-      <br />
-      <button type="submit" value="submit">Submit</button>
     </form>
   </body>
 </html>
